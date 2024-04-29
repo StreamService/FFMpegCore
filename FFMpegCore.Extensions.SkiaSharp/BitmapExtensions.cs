@@ -8,14 +8,14 @@ namespace FFMpegCore.Extensions.SkiaSharp
         {
             var destination = $"{Environment.TickCount}.png";
             using (var fileStream = File.OpenWrite(destination))
-            {
-                poster.Encode(fileStream, SKEncodedImageFormat.Png, default); // PNG does not respect the quality parameter
-            }
+            // {
+            //     poster.Encode(fileStream, SKEncodedImageFormat.Png, default); // PNG does not respect the quality parameter
+            // }
 
             try
-            {
-                return FFMpeg.PosterWithAudio(destination, audio, output);
-            }
+            // {
+            //     return FFMpeg.PosterWithAudio(destination, audio, output);
+            // }
             finally
             {
                 if (File.Exists(destination))
